@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Scimon/p6-Algorithm-GooglePolylineEncoding.svg?branch=master)](https://travis-ci.org/Scimon/p6-Algorithm-GooglePolylineEncoding)
+
 NAME
 ====
 
@@ -12,6 +14,8 @@ DESCRIPTION
 ===========
 
 Algorithm::GooglePolylineEncoding is ...
+
+https://developers.google.com/maps/documentation/utilities/polylinealgorithm
 
 AUTHOR
 ======
