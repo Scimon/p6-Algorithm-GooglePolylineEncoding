@@ -2,8 +2,8 @@ use v6.c;
 module Algorithm::GooglePolylineEncoding:ver<0.0.1>:auth<simon.proctor@gmail.com> {
 
     class PosPair {
-        has Real $.lat;
-        has Real $.lon;
+        has Real $.lat where -90 .. 90;
+        has Real $.lon where -180 .. 180;
 
         method Hash {
             return { :lat($.lat), :lon($.lon) };
