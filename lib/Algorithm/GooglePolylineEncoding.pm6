@@ -14,7 +14,7 @@ module Algorithm::GooglePolylineEncoding:ver<1.0.0>:auth<simon.proctor@gmail.com
     }
 
     multi sub encode-number ( Real $value is copy where * < 0 ) returns Str is export {
-        $value = round( $value * 1e5 );
+        $value = round( $value * 10⁵ );
         $value = $value +< 1;
         $value = $value +& 0xffffffff;
 
@@ -25,7 +25,7 @@ module Algorithm::GooglePolylineEncoding:ver<1.0.0>:auth<simon.proctor@gmail.com
     }
 
     multi sub encode-number ( Real $value is copy ) returns Str is export {
-        $value = round( $value * 1e5 );
+        $value = round( $value * 10⁵ );
         $value = $value +< 1;
         $value = $value +& 0xffffffff;
 
@@ -95,7 +95,7 @@ module Algorithm::GooglePolylineEncoding:ver<1.0.0>:auth<simon.proctor@gmail.com
         my $value = ( $encoded.comb().reverse.map( *.ord - 63 ).map( * +& 0x1f ).map( *.base(2) ).map( { '0' x ( $_.chars %% 5 ?? 0 !! 5 - $_.chars % 5 ) ~ $_ } ).join() ).parse-base(2);
         $value = +^ $value if $value +& 1;
         $value = $value +> 1;
-        $value = $value / 1e5;
+        $value = $value / 10⁵;
         return $value;
     }
 }
