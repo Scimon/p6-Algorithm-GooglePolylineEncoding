@@ -1,0 +1,6 @@
+Revision history for Algorithm-GooglePolylineEncoding
+
+{{$NEXT}}
+
+1.0.1  2018-05-08T09:09:34+01:00
+    - Update from Aleks-Daniel Jakimenko-Aleksejev resolves some issues with Num stringification
