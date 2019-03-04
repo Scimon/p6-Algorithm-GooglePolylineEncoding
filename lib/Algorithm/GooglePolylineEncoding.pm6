@@ -1,8 +1,8 @@
-use v6.c;
+use v6;
 subset Latitude of Real where { -90 <= $_ <= 90 or note "Latitude $_ out of range" and False };
 subset Longitude of Real where { -180 <= $_ <= 180 or note "Longitude $_ out of range" and False };
 
-module Algorithm::GooglePolylineEncoding:ver<1.0.1>:auth<simon.proctor@gmail.com> {
+module Algorithm::GooglePolylineEncoding:ver<1.0.2>:auth<simon.proctor@gmail.com> {
 
     class PosPair {
         has Latitude $.lat;
