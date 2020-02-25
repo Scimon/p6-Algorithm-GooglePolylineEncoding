@@ -10,7 +10,7 @@
   "name" : "Algorithm::GooglePolylineEncoding",
   "perl" : "6.c",
   "provides" : {
-    "Algorithm::GooglePolylineEncoding" : "lib/Algorithm/GooglePolylineEncoding.pm6"
+    "Algorithm::GooglePolylineEncoding" : "lib/Algorithm/GooglePolylineEncoding.rakumod"
   },
   "resources" : [ ],
   "source-url" : "https://github.com/Scimon/p6-Algorithm-GooglePolylineEncoding.git",
